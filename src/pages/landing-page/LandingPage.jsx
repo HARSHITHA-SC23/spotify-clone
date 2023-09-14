@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import TopBar from '../../components/header/TopBar';
 import './landing_page.scss';
 import { Button, Typography } from '@mui/material';
 import { ReactComponent as Logo } from '../../assets/Spotify.svg';
@@ -33,7 +32,7 @@ const LandingPage = () => {
             <div className='landingSub'>
                 <Logo style={{ width: '30em', height: 'auto' }} />
                 {!authToken ?
-                    (<Button className='topbarLogin'><a href={loginUrl}><Typography variant='l1'>LOGIN</Typography></a></Button>) :
+                    (<Button className='landingButton'><a href={loginUrl}><Typography variant='l1'>LOGIN</Typography></a></Button>) :
                     (handleAfterLogin())
                 }
             </div>
