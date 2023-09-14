@@ -1,0 +1,11 @@
+.landingMain {
+    min-height: 100vh;
+    background: rgb(29,29,29);
+    background: linear-gradient(65deg, rgba(29,29,29,1) 32%, rgba(44,43,44,1) 100%);
+}
+.landingSub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
