@@ -8,6 +8,9 @@ export const URL = `/`;
 export const API_CLIENT_LOGIN = `https://accounts.spotify.com/api/token`
 export const API_AUTH_URL = `https://accounts.spotify.com/authorize`
 
+//Users API Endpoint
+export const API_GET_CURRENT_USER_DETAILS = `${API_ENDPOINT}/me`
+
 //Tracks API Endpoint
 export const TRACK_RECOMMENDATION = `${API_ENDPOINT}/recommendations`
 

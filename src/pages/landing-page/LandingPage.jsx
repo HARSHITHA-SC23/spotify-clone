@@ -14,19 +14,19 @@ const LandingPage = () => {
     const handleAfterLogin = () => {
         navigate(`/playlist`)
     }
+
     useEffect(() => {
         const hash = window.location.hash
         let authToken = window.localStorage.getItem('authToken')
 
         if (!authToken && hash) {
-            console.log(authToken, hash);
             authToken = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
 
             window.location.hash = ""
             window.localStorage.setItem("authToken", authToken)
         }
         setAuthToken(authToken)
-    })
+    }, [])
 
     return (
         <div className='landingMain'>
@@ -34,7 +34,7 @@ const LandingPage = () => {
                 <Logo style={{ width: '30em', height: 'auto' }} />
                 {!authToken ?
                     (<Button className='topbarLogin'><a href={loginUrl}><Typography variant='l1'>LOGIN</Typography></a></Button>) :
-                    (handleAfterLogin)
+                    (handleAfterLogin())
                 }
             </div>
         </div>
